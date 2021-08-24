@@ -33,9 +33,9 @@ final_initiative = {initiative.index(r): int(r) for r in initiative}
 
 while True:
     if keyboard.is_pressed('tab'):
-        win32gui.ShowWindow(hwndd[dicalacon[account]-1], win32con.SW_SHOWMAXIMIZED)
+        win32gui.ShowWindow(hwndd[final_initiative[account]-1], win32con.SW_SHOWMAXIMIZED)
         shell.SendKeys('%')
-        win32gui.SetForegroundWindow(hwndd[dicalacon[account]-1])
+        win32gui.SetForegroundWindow(hwndd[final_initiative[account]-1])
         account += 1
         if account >= len(hwndd):
             account = 0
