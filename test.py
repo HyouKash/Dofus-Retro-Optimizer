@@ -12,7 +12,8 @@ hwndd = []
 
 def winEnumHandler(hwnd, ctx):
     if win32gui.IsWindowVisible(hwnd):
-        if "Dofus" in win32gui.GetWindowText(hwnd):
+        if "- Dofus" in win32gui.GetWindowText(hwnd):
+            print(win32gui.GetWindowText(hwnd))
             hwndd.append(hwnd)
             pseudos.append(win32gui.GetWindowText(hwnd))
 
