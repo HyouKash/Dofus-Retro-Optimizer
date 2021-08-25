@@ -10,9 +10,11 @@ shell = win32com.client.Dispatch("WScript.Shell")
 pseudos = []
 hwndd = []
 
+question = str(input("Choose you're game within Dofus and Dofus Retro : "))
+
 def winEnumHandler(hwnd, ctx):
     if win32gui.IsWindowVisible(hwnd):
-        if "- Dofus" in win32gui.GetWindowText(hwnd):
+        if "- " + question in win32gui.GetWindowText(hwnd):
             print(win32gui.GetWindowText(hwnd))
             hwndd.append(hwnd)
             pseudos.append(win32gui.GetWindowText(hwnd))
